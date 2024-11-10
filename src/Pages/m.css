@@ -1,0 +1,66 @@
+.j {
+    position: relative;
+    background-image: url(https://thumbs.dreamstime.com/b/graduation-cap-circuit-board-background-education-concept-318163543.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+}
+
+/* m.css */
+.box {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start slightly lower */
+    transition: opacity 0.6s ease, transform 0.8s ease; /* Smooth transition */
+  }
+  
+  .box.visible {
+    opacity: 1; /* Make visible */
+    transform: translateY(0); /* Move to original position */
+  }
+  
+
+
+.j::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay to make the text more readable */
+    z-index: 1;
+}
+
+.text-container {
+    position: absolute;
+    z-index: 2; /* Ensure the text is above the overlay */
+    color: white; /* White text color for better contrast */
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .j {
+        height: 400px; /* Adjust height for tablets */
+    }
+    .text-container {
+        font-size: 2.5rem;
+    }
+    .g{
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .j {
+        height: 300px; /* Adjust height for mobile phones */
+    }
+    .text-container {
+        font-size: 2rem;
+    }
+    
+}

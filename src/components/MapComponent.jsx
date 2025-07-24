@@ -9,8 +9,8 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 25.39353, // Latitudee
-  lng: 68.36888, // Longitude
+  lat: 25.39333, // Latitudee
+  lng: 68.36852, // Longitude
 };
 
 const MapComponent = () => {

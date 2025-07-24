@@ -1,12 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
+body {
+  padding-top: 164px; /* Height of the navbar to prevent it from overlapping */
+}
+
 
 .logo {
   height: 6em;

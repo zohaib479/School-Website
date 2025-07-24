@@ -3,7 +3,7 @@
   overflow: hidden; /* Ensures the text stays within the container */
   white-space: nowrap; /* Prevents the text from wrapping */
   border-right: 0.15em solid black; /* Cursor effect */
-  font-size: 2.25rem;
+  font-size: 2.24rem;
   position: relative;
   animation: moveToCenter 4s ease-out, typing 8s steps(300) 3s forwards, blink 0.75s step-end infinite alternate 6s, glow 1.5s ease-in-out infinite alternate 9s;
    
@@ -40,16 +40,16 @@
 /* Glowing effect */
 @keyframes glow {
   0% {
-    text-shadow: 0 0 10px rgba(255, 182, 193, 0.4), 0 0 20px rgba(255, 192, 203, 0.3), 0 0 30px rgba(255, 105, 180, 0.3);
+    text-shadow: 0 0 10px rgba(64, 74, 185, 0.4), 0 0 20px rgba(107, 53, 165, 0.3), 0 0 30px rgba(20, 54, 105, 0.3);
   }
   100% {
-    text-shadow: 0 0 20px rgba(255, 182, 193, 0.7), 0 0 30px rgba(255, 20, 147, 0.6), 0 0 40px rgba(255, 105, 180, 0.9);
+    text-shadow: 0 0 20px rgba(60, 61, 161, 0.7), 0 0 30px rgba(89, 97, 174, 0.6), 0 0 40px rgba(71, 89, 194, 0.9);
   }
 }
 
 
 @media screen and (max-width: 768px) {
   .animated-text {
-    font-size: 1.3rem;
+    font-size: 1.27rem;
   }
 }

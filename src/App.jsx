@@ -11,6 +11,8 @@ import AnimatedHeading from './components/AnimatedHeading';
 import Navbar from './components/Navbar';
 import Events from './Pages/Events';
 import Gallery from './Pages/Gallery';
+import Footer from './components/Footer';
+import Careers from './Pages/Careers';
 const App = () => {
 
   
@@ -36,8 +38,9 @@ const App = () => {
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/gallery' element={<Gallery/>} />
       <Route path='/events' element={<Events/>}/>
+      <Route path='/careers' element={<Careers/>}/>
     </Routes>
-    
+    <Footer/>
    </>
     
   )

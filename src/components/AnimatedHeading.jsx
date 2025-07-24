@@ -5,10 +5,11 @@ const AnimatedHeading = () => {
   return (
     <>
 
-    <h1 className="animated-text font-bold text-pink-400">
+    <div className='bg-gray-800'> 
+    <h1 className="animated-text font-bold text-white-800">
       SHANI MEMORIAL ENGLISH HIGH SCHOOL
     </h1>
-    
+    </div>
     </>
   );
 };

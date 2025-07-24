@@ -1,92 +1,107 @@
-import React, { useEffect } from 'react';
-import './m.css';
-import Activity from '../components/Activity';
-import Choose from '../components/Choose';
-import MapComponent from '../components/MapComponent';
-import SwitchComponent from '../components/SwitchComponent';
-import { useState } from 'react';
-const Home = () => {
-  useEffect(() => {
-    const boxes = document.querySelectorAll('.box');
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaAward, FaBook, FaUsers, FaChalkboardTeacher } from 'react-icons/fa';
+import homee from '../assets/Shani.png';
+import CountUp from 'react-countup';
+import { Link } from 'react-router-dom';
 
-    const options = {
-      root: null, // Use the viewport as the root 
-      rootMargin: '0px',
-      threshold: 0.1 // Trigger when 10% of the box is visible
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible'); // Add class to make it visible
-          observer.unobserve(entry.target); // Stop observing after it becomes visible
-        }
-      });
-    }, options);
-
-    boxes.forEach(box => {
-      observer.observe(box); // Start observing each box
-    });
-  }, []); // Empty dependency array to run only once on mount
-  const [val, setVal] = useState(true);
-  const togg = () => {
-    setVal(!val);
-  };
+const HomePage = () => {
   return (
-    <>
-    <div onChange={togg}> 
-    <SwitchComponent val={val} />
-    </div>
-   
-      <div className='j'>
-        <div className='text-container mt-10 box'> {/* Add 'box' class here */}
-          <h1>Broad Your <br /> <span className='text-blue-700'>Knowledge </span>  With <span className='text-pink-300'>  Tutors</span> </h1>
-          <button className='text-xl border border-x-white active:scale-125 '>
-            CONTACT US
-          </button>
-        </div>
-      </div>
+    <div className="bg-gray-900 text-white justify-center min-h-screen overflow-x-hidden">
+      {/* Hero Section */}
       
-      <hr className='bg-pink-200 h-1' />
-      <h1 className='ml-2 p-3 text-black text-3xl font-semibold box'>OUR ACTIVITIES</h1> {/* Add 'box' class here */}
+       
+       <motion.div
+        className="relative w-full overflow-hidden"
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.5, ease: 'easeOut' }}
+      >
+        <div className="absolute top-0 left-0 w-full h-full z-10 " />
+        <img
+          src={homee}
+          alt="School Banner"
+          className="w-full max-h-[120vh] object-cover object-center"
+          style={{ aspectRatio: '16/9', width: '100%' }}
+        />
+      </motion.div>
+     
 
-      <div className='flex justify-between'>
-        <div className='mt-4 box'>
-          <Activity ico={'fa-utensils'} text={'FESTIVALS'} className="box" />
-          <Activity ico={'fa-music'} text={'MUSIC'} className="box" />
-          <Activity ico={'fa-baseball'} text={'Many Sports'} className="box" />
-          <Activity ico={'fa-globe'} text={'Languages'} className="box" />
-          <Activity ico={'fa-location-dot'} text={'newLocation'} className="box" />
-        </div>
-        <div>
-          <img className='h-80 box' src="https://www.shutterstock.com/image-vector/little-school-children-stand-holding-600nw-2200587181.jpg" alt="" /> {/* Add 'box' class here */}
-        </div>
-        <div>
-          <img className='g h-80 box' src="https://thumbs.dreamstime.com/b/school-young-biracial-male-student-wearing-backpack-walking-outdoors-has-dark-hair-red-shirt-carrying-black-320509293.jpg" alt="" /> {/* Add 'box' class here */}
-        </div>
-        <div>
-          <img className='g h-80 box' src="https://media.istockphoto.com/id/1676220225/photo/children-learning-in-a-school-classroom.jpg?s=612x612&w=0&k=20&c=rBAKsscZJRWgFQmkBKJIltnhzQXUnuICCtGUbdMCcag=" alt="" /> {/* Add 'box' class here */}
-        </div>
-      </div>
+      {/* Quick Stats */}
+      <section className="py-16 px-4 sm:px-6 md:px-20">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ staggerChildren: 0.3 }}
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center"
+        >
+          {[
+            { icon: <FaUsers size={40} />, end: 1000, subtitle: 'Students' },
+            { icon: <FaChalkboardTeacher size={40} />, end: 50, subtitle: 'Teachers' },
+            { icon: <FaAward size={40} />, end: 120, subtitle: 'Awards' },
+            { icon: <FaBook size={40} />, end: 30, subtitle: 'Subjects' },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              className="p-6 bg-gray-800 rounded-xl shadow-md"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+            >
+              <div className="text-yellow-400 mb-2">{item.icon}</div>
+              <h3 className="text-2xl sm:text-3xl font-bold">
+                <CountUp end={item.end} duration={2} enableScrollSpy />+
+              </h3>
+              <p className="text-gray-300 text-sm sm:text-base">{item.subtitle}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </section>
 
-      <br />
-      <hr />
-      <h1 className='ml-2 p-3 text-black text-4xl font-semibold box'>Why Choose Us</h1> {/* Add 'box' class here */}
-      <div className="justify-around grid grid-cols-2 gap-3 md:grid-cols-4">
-        <Choose ico={'fa-book'} title={'Variety Courses'} text={'kuch bh text'} className="box" />
-        <Choose ico={'fa-graduation-cap'} title={'Experienced Tutors'} text={'kuch bh'} className="box" />
-        <Choose ico={'fa-users'} title={'Best Learning Environment'} text={`Solar System Installed  `} className="box" />
-        <Choose ico={'fa-calendar-days'} title={'Events'} text={'Kuch bh'} className="box" />
-      </div>
-      <br />
-      <hr />
-      <h1 className='ml-2 p-3 text-black text-4xl font-semibold box'>Chase Us</h1> {/* Add 'box' class here */}
-      <div className='box'>
-        <MapComponent />
-      </div>
+      {/* Programs Overview */}
+      <section className="bg-gray-800 py-16 px-4 sm:px-6 md:px-20">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-yellow-400 mb-10">
+          Our Programs
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+          {['Primary', 'Middle', 'Secondary'].map((level, idx) => (
+            <motion.div
+              key={idx}
+              className="p-6 bg-gray-700 rounded-xl shadow-md text-center hover:scale-105 transition-transform"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: idx * 0.2 }}
+            >
+              <h3 className="text-xl sm:text-2xl font-semibold text-yellow-300 mb-4">
+                {level} School
+              </h3>
+              <p className="text-gray-300 text-sm sm:text-base">
+                Comprehensive {level.toLowerCase()} level curriculum designed to inspire
+                and challenge students academically and personally.
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
 
-    </>
+      {/* Contact CTA */}
+      <section className="bg-yellow-400 text-gray-900 text-center px-4 py-10">
+  <h2 className="text-2xl sm:text-3xl font-bold">Ready to Join Us?</h2>
+  <p className="text-base sm:text-lg mb-4">
+    Enroll your child today and be a part of our inspiring journey.
+  </p>
+  <Link
+    to="/contact"
+    className="inline-block px-6 py-3 bg-gray-900 text-white font-semibold rounded-full hover:bg-gray-800 transition"
+  >
+    Contact Us
+  </Link>
+</section>
+
+      
+    </div>
   );
-}
+};
 
-export default Home;
+export default HomePage;

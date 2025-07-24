@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import pic1 from '../assets/pic-1.jpg';
 import pic2 from '../assets/pic-2.jpg';
 import pic3 from '../assets/pic-3.jpg';
@@ -42,75 +42,94 @@ import pic40 from '../assets/pic-40.jpg';
 import SwitchComponent from '../components/SwitchComponent';
 
 const Gallery = () => {
-    const [val, setval] = useState(true)
-  const togg=()=>{
-    setval(!val)
-  }
+  const [val, setval] = useState(true);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setLoaded(true), 200);
+  }, []);
+
+  const togg = () => setval(!val);
+
   return (
-    <> 
-    <div onClick={togg}> 
-  <SwitchComponent  val={val}/>
-  </div>
-      <h1  id='section2' className={`text-3xl text-black ${val? 'text-black' :'text-white'}  font-extrabold underline underline-offset-2 mb-6 text-center`}>Qirat Competition</h1>
-      <div  className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 p-4'>
-        {[pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10, pic11, pic12, pic13, pic14, pic15, pic16, pic17, pic18,pic19,pic20,pic21,pic22,pic23,pic24,pic25,pic26,pic27,pic28,pic29,pic30].map((pic, index) => (
-          <div
-            key={index}
-            className='relative overflow-hidden rounded-2xl transform transition-transform duration-300'
-          >
+    <div className="bg-gray-800 min-h-screen pb-10">
+   
+<h1
+  id="section2"
+  className={`text-4xl text-white font-extrabold mb-4 pt-8 text-center transition-opacity duration-1000 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+>
+  Qirat Competition
+  <span className="block w-52 h-1 bg-yellow-400 mx-auto mt-2 rounded"></span>
+</h1>
+
+      <div className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 px-6 transition-all duration-1000 ${loaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        {[pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10, pic11, pic12, pic13, pic14, pic15, pic16, pic17, pic18, pic19, pic20, pic21, pic22, pic23, pic24, pic25, pic26, pic27, pic28, pic29, pic30].map((pic, index) => (
+          <div key={index} className='relative overflow-hidden rounded-2xl group shadow-xl transform transition duration-500 hover:scale-105'>
             <img
               src={pic}
-              alt=""
-              className='h-40 w-full object-cover rounded-2xl transform transition-transform duration-300 hover:scale-125 hover:absolute hover:top-0 hover:left-0 hover:right-0 hover:bottom-0 hover:z-20'
+              alt={`Qirat ${index + 1}`}
+              className='h-40 w-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-500'
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
         ))}
       </div>
-      <h1 className={`text-3xl text-black ${val? 'text-black' :'text-white'}  font-extrabold underline underline-offset-2 mb-6 text-center`}>Islamic G.K Competition</h1>
-      <div className="flex flex-col lg:flex-row gap-5 p-4 ml-2">
-  <img
-    className="h-80 border border-white border-2 w-full lg:w-auto rounded-3xl border-4 border-gray-300 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-    src={pic31}
-    alt=""
-  />
-  <img
-    className="h-80 border border-white border-2 w-full lg:w-auto rounded-3xl border-4 border-gray-300 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-    src={pic32}
-    alt=""
-  />
-  <img
-    className="h-80 border border-white border-2 w-full lg:w-auto rounded-3xl border-4 border-gray-300 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-    src={pic33}
-    alt=""
-  />
-</div>
 
-<h1 id='section1' className={`text-3xl text-black ${val? 'text-black' :'text-white'}  font-extrabold underline underline-offset-2 mb-6 text-center`}>Annual Sports Day</h1>     
-<div  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-10 xl:grid-cols-6 gap-6 p-4 mx-auto justify-center">
-  {[pic34, pic35, pic36, pic37,pic38,pic39].map((pic, index) => (
-    <div
-      key={index}
-      className="relative overflow-hidden rounded-2xl border-2 border-gray-200 shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
-    >
-      <img
-        src={pic}
-        alt=""
-        className="w-full h-56 object-cover transform transition-transform  duration-300 hover:scale-125"
-      />
+       
+         <h1      
+  id='section3' className="text-4xl text-white font-extrabold  mb-8 mt-16 text-center"
+>
+  Islamic G.K Competition
+  <span className="block w-52 h-1 bg-yellow-400 mx-auto mt-2 rounded"></span>
+</h1>
+      <div className="flex flex-col lg:flex-row gap-8 px-6 justify-center items-center">
+        {[pic31, pic32, pic33].map((pic, idx) => (
+          <img      
+            key={idx}
+            src={pic}
+            alt={`Islamic GK ${idx + 1}`}
+            className="h-80 w-full lg:w-1/3 object-cover rounded-3xl border-4 border-gray-300 shadow-2xl transform transition duration-500 hover:scale-105"
+          />
+        ))}
+      </div>
+
+      
+        <h1
+  id='section1' className={`text-4xl ${val ? 'text-white' : 'text-gray-100'} font-extrabold  mb-8 mt-16 text-center`}
+>
+  Anual Sports Day
+  <span className="block w-44 h-1 bg-yellow-400 mx-auto mt-2 rounded"></span>
+</h1>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 px-6">
+        {[pic34, pic35, pic36, pic37, pic38, pic39].map((pic, index) => (
+          <div key={index} className="relative rounded-2xl overflow-hidden border-2 border-gray-200 shadow-lg group">
+            <img
+              src={pic}
+              alt={`Sports Day ${index + 1}`}
+              className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-300" />
+          </div>
+        ))}
+      </div>
+
+             <h1
+  id='section1' className={`text-4xl ${val ? 'text-white' : 'text-gray-100'} font-extrabold  mb-8 mt-16 text-center`}
+>
+  2nd Sports Day
+  <span className="block w-44 h-1 bg-yellow-400 mx-auto mt-2 rounded"></span>
+</h1>
+
+      <div className="px-6">
+        <img
+          src={pic40}
+          alt="2nd Sports Day"
+          className="w-full max-h-[80vh] object-cover rounded-3xl shadow-2xl transform transition duration-500 hover:scale-105"
+        />
+      </div>
     </div>
-  ))}
-</div>
-
-<h1 className={`text-3xl text-black ${val? 'text-black' :'text-white'}  font-extrabold underline underline-offset-2 mb-6 text-center`}>2nd Sports Day</h1>
-<div className="w-full p-4">
-  <img
-    className="border border-white border-2 w-full h-auto max-h-[80vh] object-cover rounded-2xl transform transition-transform duration-300 hover:scale-110 mx-auto"
-    src={pic40}
-    alt=""
-  />
-</div>
-    </>
   );
-}
+};
 
 export default Gallery;

@@ -4,12 +4,22 @@ import { FaAward, FaBook, FaUsers, FaChalkboardTeacher } from 'react-icons/fa';
 import homee from '../assets/Shani.png';
 import CountUp from 'react-countup';
 import { Link } from 'react-router-dom';
+import { Helmet } from "react-helmet";
+
 
 const HomePage = () => {
   return (
     <div className="bg-gray-900 text-white justify-center min-h-screen overflow-x-hidden">
       {/* Hero Section */}
-      
+<Helmet>
+    <title>Home | Shani Memorial English High School</title>
+    <meta name="description" content="Welcome to Shani Memorial English High School. Quality education, discipline, and character-building for the next generation." />
+    <meta property="og:title" content="Home | Shani Memorial English High School" />
+    <meta property="og:description" content="Explore our academics, staff, events, and admissions information." />
+    <meta property="og:image" content="https://yourdomain.com/images/home.jpg" />
+    <meta property="og:url" content="https://yourdomain.com/home" />
+    <meta property="og:type" content="website" />
+  </Helmet>
        
        <motion.div
         className="relative w-full overflow-hidden"

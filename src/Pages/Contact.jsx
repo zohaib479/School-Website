@@ -1,9 +1,20 @@
 import React from 'react';
 import { FaPhoneAlt, FaEnvelope, FaUserTie, FaMapMarkerAlt } from 'react-icons/fa';
 import MapComponent from '../components/MapComponent';
-
+import { Helmet } from "react-helmet";
 const Contact = () => {
   return (
+    <> 
+    <Helmet>
+  <title>Contact Us | Shani Memorial English High School</title>
+  <meta name="description" content="Get in touch with Shani Memorial English High School. We're here to answer your questions and guide you." />
+  <meta property="og:title" content="Contact Us | Shani Memorial English High School" />
+  <meta property="og:description" content="Reach out to us for admissions, feedback, or general inquiries." />
+  <meta property="og:image" content="https://yourdomain.com/images/contact.jpg" />
+  <meta property="og:url" content="https://yourdomain.com/contact" />
+</Helmet>
+
+    
     <div className="bg-gray-800 text-gray-300 py-12 px-6 md:px-16 min-h-screen font-sans">
       {/* Heading */}
       <div className="text-center mb-12">
@@ -79,6 +90,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

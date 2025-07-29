@@ -1,9 +1,20 @@
 import React from 'react';
 import { FaMapMarkerAlt, FaClock } from 'react-icons/fa';
-
+import { Helmet } from "react-helmet";
 const Careers = () => {
   return (
+<> 
+<Helmet>
+  <title>Careers | Shani Memorial English High School</title>
+  <meta name="description" content="Join our team of passionate educators and make a difference in young lives." />
+  <meta property="og:title" content="Careers | Shani Memorial English High School" />
+  <meta property="og:description" content="Explore current job openings and apply to be part of Shani Memorial's mission in education." />
+  <meta property="og:image" content="https://yourdomain.com/images/careers.jpg" />
+  <meta property="og:url" content="https://yourdomain.com/careers" />
+</Helmet>
+
     <div className="min-h-screen bg-gray-800 text-gray-100 px-6 py-12">
+      
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-extrabold text-center underline decoration-yellow-400 mb-6">
           Current Vacancies
@@ -24,7 +35,21 @@ const Careers = () => {
             <div className="text-xl font-semibold">Lecturer Science  (Middle School)</div>
             <div className="flex items-center gap-4 mt-2 md:mt-0 text-gray-300">
               <span className="flex items-center">
-                <FaClock className="mr-2" /> July 31, 2025
+                <FaClock className="mr-2" /> August 30, 2025
+              </span>
+              <span className="flex items-center">
+                <FaMapMarkerAlt className="mr-2" /> Hyderabad
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-gray-700 rounded-lg shadow-lg overflow-hidden divide-y divide-gray-600 mt-6">
+          <div className="flex flex-col md:flex-row justify-between items-center px-6 py-4">
+            <div className="text-xl font-semibold">Lecturer Physics  (Secondary School)</div>
+            <div className="flex items-center gap-4 mt-2 md:mt-0 text-gray-300">
+              <span className="flex items-center">
+                <FaClock className="mr-2" /> August 30, 2025
               </span>
               <span className="flex items-center">
                 <FaMapMarkerAlt className="mr-2" /> Hyderabad
@@ -44,6 +69,7 @@ const Careers = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

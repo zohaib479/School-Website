@@ -1,7 +1,18 @@
 import React from 'react';
-
+import { Helmet } from "react-helmet";
 const AboutPage = () => {
   return (
+    <>
+    <Helmet>
+  <title>About Us | Shani Memorial English High School</title>
+  <meta name="description" content="Learn about the mission, values, and journey of Shani Memorial English High School." />
+  <meta property="og:title" content="About Us | Shani Memorial English High School" />
+  <meta property="og:description" content="Founded with a vision to nurture minds and build strong character through education." />
+  <meta property="og:image" content="https://yourdomain.com/images/about.jpg" />
+  <meta property="og:url" content="https://yourdomain.com/about" />
+</Helmet>
+
+    
     <div className="bg-gray-800 text-white min-h-screen py-12 px-6 md:px-20">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-center text-white mb-10 underline decoration-yellow-400">
@@ -84,6 +95,7 @@ const AboutPage = () => {
         </section>
       </div>
     </div>
+    </>
   );
 };
 

@@ -62,8 +62,18 @@ import pic60 from '../assets/pic-60.jpg';
 import pic61 from '../assets/pic-61.jpg';
 import pic62 from '../assets/pic-62.jpg';
 import pic63 from '../assets/pic-63.jpg';
-import SwitchComponent from '../components/SwitchComponent';
+import pic64 from '../assets/secondd.jpg';
+import pic65 from '../assets/meelad.jpg';
+import pic66 from '../assets/14Aug1.jpg';
+import pic67 from '../assets/14Aug2.jpg';
+import pic68 from '../assets/14Aug3.jpg';
+import pic69 from '../assets/14Aug4.jpg';
+import pic70 from '../assets/14Aug5.jpg';
+import pic71 from '../assets/14Aug6.jpg';
 
+
+import SwitchComponent from '../components/SwitchComponent';
+import { Helmet } from 'react-helmet';
 const Gallery = () => {
   const [val, setval] = useState(true);
   const [loaded, setLoaded] = useState(false);
@@ -75,11 +85,21 @@ const Gallery = () => {
   const togg = () => setval(!val);
 
   return (
+    <>
+    <Helmet>
+  <title>Gallery | Shani Memorial English High School</title>
+  <meta name="description" content="Browse our gallery showcasing events, student activities, and campus life." />
+  <meta property="og:title" content="Gallery | Shani Memorial English High School" />
+  <meta property="og:description" content="A glimpse into our vibrant school life – celebrations, competitions, and learning in action." />
+  <meta property="og:image" content="https://yourdomain.com/images/gallery.jpg" />
+  <meta property="og:url" content="https://yourdomain.com/gallery" />
+</Helmet>
+
     <div className="bg-gray-800 min-h-screen pb-10">
 
       {/* Result 2025 Section */}
       <h1
-        id="sectionResult"
+        id="section4"
         className={`text-4xl text-white font-extrabold mb-4 pt-8 text-center transition-opacity duration-1000 ${loaded ? 'opacity-100' : 'opacity-0'}`}
       >
         Result 2025
@@ -160,7 +180,7 @@ const Gallery = () => {
         ))}
       </div>
 
-      {/* 2nd Sports Day */}
+     
       <h1
         id='section1' className={`text-4xl ${val ? 'text-white' : 'text-gray-100'} font-extrabold  mb-8 mt-16 text-center`}
       >
@@ -175,7 +195,60 @@ const Gallery = () => {
           className="w-full max-h-[80vh] object-cover rounded-3xl shadow-2xl transform transition duration-500 hover:scale-105"
         />
       </div>
-    </div>
+
+      <h1
+        id='section1' className={`text-4xl ${val ? 'text-white' : 'text-gray-100'} font-extrabold  mb-8 mt-16 text-center`}
+      >
+        3rd Sports Day
+        <span className="block w-44 h-1 bg-yellow-400 mx-auto mt-2 rounded"></span>
+      </h1>
+      <div className="px-6">
+        <img
+          src={pic64}
+          alt="3rd Sports Day"
+          className="w-full max-h-[80vh] object-cover rounded-3xl shadow-2xl transform transition duration-500 hover:scale-105"
+        />
+      </div>
+
+
+      <h1
+        id='sectionm' className={`text-4xl ${val ? 'text-white' : 'text-gray-100'} font-extrabold  mb-8 mt-16 text-center`}
+      >
+        Meelad Day
+        <span className="block w-44 h-1 bg-yellow-400 mx-auto mt-2 rounded"></span>
+      </h1>
+      <div className="px-6">
+        <img
+          src={pic65}
+          alt="3rd Sports Day"
+          className="w-full max-h-[80vh] object-cover rounded-3xl shadow-2xl transform transition duration-500 hover:scale-105"
+        />
+      </div>
+    
+
+
+    <h1
+        id="sectioncel"
+        className={`text-4xl text-white font-extrabold mb-4 pt-8 text-center transition-opacity duration-1000 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+      >
+        14 August Celebration
+        <span className="block w-52 h-1 bg-yellow-400 mx-auto mt-2 rounded"></span>
+      </h1>
+
+      <div className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 px-6 transition-all duration-1000 ${loaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        {[pic66, pic67, pic68, pic69, pic70, pic71].map((pic, index) => (
+          <div key={index} className='relative overflow-hidden rounded-2xl group shadow-xl transform transition duration-500 hover:scale-105'>
+            <img
+              src={pic}
+              alt={`Result 2025 - ${index + 1}`}
+              className='h-40 w-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-500'
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </div>
+        ))}
+      </div>
+</div>
+    </>
   );
 };
 

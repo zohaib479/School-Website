@@ -10,8 +10,8 @@ const Contact = () => {
   <meta name="description" content="Get in touch with Shani Memorial English High School. We're here to answer your questions and guide you." />
   <meta property="og:title" content="Contact Us | Shani Memorial English High School" />
   <meta property="og:description" content="Reach out to us for admissions, feedback, or general inquiries." />
-  <meta property="og:image" content="https://yourdomain.com/images/contact.jpg" />
-  <meta property="og:url" content="https://yourdomain.com/contact" />
+  <meta property="og:image" content="https://school-website-phi-six.vercel.app/images/contact.jpg" />
+  <meta property="og:url" content="https://school-website-phi-six.vercel.app/contact" />
 </Helmet>
 
     

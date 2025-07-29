@@ -16,8 +16,8 @@ const HomePage = () => {
     <meta name="description" content="Welcome to Shani Memorial English High School. Quality education, discipline, and character-building for the next generation." />
     <meta property="og:title" content="Home | Shani Memorial English High School" />
     <meta property="og:description" content="Explore our academics, staff, events, and admissions information." />
-    <meta property="og:image" content="https://yourdomain.com/images/home.jpg" />
-    <meta property="og:url" content="https://yourdomain.com/home" />
+    <meta property="og:image" content="https://school-website-phi-six.vercel.app/images/home.jpg" />
+    <meta property="og:url" content="https://school-website-phi-six.vercel.app/home" />
     <meta property="og:type" content="website" />
   </Helmet>
        

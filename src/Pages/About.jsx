@@ -8,8 +8,8 @@ const AboutPage = () => {
   <meta name="description" content="Learn about the mission, values, and journey of Shani Memorial English High School." />
   <meta property="og:title" content="About Us | Shani Memorial English High School" />
   <meta property="og:description" content="Founded with a vision to nurture minds and build strong character through education." />
-  <meta property="og:image" content="https://yourdomain.com/images/about.jpg" />
-  <meta property="og:url" content="https://yourdomain.com/about" />
+  <meta property="og:image" content="https://school-website-phi-six.vercel.app/images/about.jpg" />
+  <meta property="og:url" content="https://school-website-phi-six.vercel.app/about" />
 </Helmet>
 
     

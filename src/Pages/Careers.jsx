@@ -9,8 +9,8 @@ const Careers = () => {
   <meta name="description" content="Join our team of passionate educators and make a difference in young lives." />
   <meta property="og:title" content="Careers | Shani Memorial English High School" />
   <meta property="og:description" content="Explore current job openings and apply to be part of Shani Memorial's mission in education." />
-  <meta property="og:image" content="https://yourdomain.com/images/careers.jpg" />
-  <meta property="og:url" content="https://yourdomain.com/careers" />
+  <meta property="og:image" content="https://school-website-phi-six.vercel.app/images/careers.jpg" />
+  <meta property="og:url" content="https://school-website-phi-six.vercel.app/careers" />
 </Helmet>
 
     <div className="min-h-screen bg-gray-800 text-gray-100 px-6 py-12">

@@ -77,8 +77,8 @@ const HomePage = () => {
         <meta name="description" content="Stay updated with upcoming events, celebrations, and academic schedules at our school." />
         <meta property="og:title" content="Events | Shani Memorial English High School" />
         <meta property="og:description" content="Explore recent and upcoming events shaping the student experience at Shani Memorial." />
-        <meta property="og:image" content="https://yourdomain.com/images/events.jpg" />
-        <meta property="og:url" content="https://yourdomain.com/events" />
+        <meta property="og:image" content="https://school-website-phi-six.vercel.app/images/events.jpg" />
+        <meta property="og:url" content="https://school-website-phi-six.vercel.app/events" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-800 text-white flex items-center justify-center px-4">

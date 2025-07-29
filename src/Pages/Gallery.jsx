@@ -91,8 +91,8 @@ const Gallery = () => {
   <meta name="description" content="Browse our gallery showcasing events, student activities, and campus life." />
   <meta property="og:title" content="Gallery | Shani Memorial English High School" />
   <meta property="og:description" content="A glimpse into our vibrant school life – celebrations, competitions, and learning in action." />
-  <meta property="og:image" content="https://yourdomain.com/images/gallery.jpg" />
-  <meta property="og:url" content="https://yourdomain.com/gallery" />
+  <meta property="og:image" content="https://school-website-phi-six.vercel.app/images/gallery.jpg" />
+  <meta property="og:url" content="https://school-website-phi-six.vercel.app/gallery" />
 </Helmet>
 
     <div className="bg-gray-800 min-h-screen pb-10">

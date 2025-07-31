@@ -30,13 +30,18 @@ export default function Navbar() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
               {/* Logo (left) */}
-              <div className="flex items-center">
-                <img
-                  className="h-10 w-auto animate-spin"
-                  src={logo}
-                  alt="Logo"
-                />
-              </div>
+   <div className="h-14 w-14 rounded-full border-[3px] border-yellow-400 shadow-lg overflow-hidden bg-white">
+  <img
+    src={logo}
+    alt="Logo"
+    className="w-full h-full object-cover scale-[1.3] -translate-y-[14%] -translate-x-[4.2%]" 
+  />
+</div>
+
+
+
+
+
 
               {/* Menu (right) */}
               <div className="hidden md:flex items-center space-x-4">

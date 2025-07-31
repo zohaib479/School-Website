@@ -7,7 +7,7 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between text-sm">
         {/* Left: Text */}
         <p className="text-center md:text-left font-medium tracking-wide">
-          © {new Date().getFullYear()} SHANI MEMORIAL ENGLISH HIGHSCHOOL. All rights reserved.
+          © {new Date().getFullYear()} SHANI MEMORIAL ENGLISH HIGH SCHOOL. All rights reserved.
         </p>
 
         {/* Right: Developer credit & Icons */}

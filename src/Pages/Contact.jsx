@@ -58,15 +58,13 @@ const Contact = () => {
 
             {/* Email */}
        <div className="w-full">
-  <div className="flex justify-start">
-    <div className="w-full">
-      <div className="flex items-start gap-4 bg-white/10 p-4 rounded-lg shadow hover:shadow-yellow-400 transition">
-        <FaEnvelope className="text-yellow-400 text-2xl mt-1" />
-        <div>
-          <h2 className="font-semibold text-lg text-gray-100">Email</h2>
-          <p className="text-gray-300 break-words">shanimemorialenglishhighschool@gmail.com</p>
-        </div>
-      </div>
+  <div className="flex items-start gap-4 bg-white/10 p-4 rounded-lg shadow hover:shadow-yellow-400 transition">
+    <FaEnvelope className="text-yellow-400 text-2xl mt-1" />
+    <div>
+      <h2 className="font-semibold text-lg text-gray-100">Email</h2>
+      <p className="text-gray-300 break-all">
+        shanimemorialenglishhighschool@gmail.com
+      </p>
     </div>
   </div>
 </div>

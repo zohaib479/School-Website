@@ -58,8 +58,8 @@ const Contact = () => {
 
             {/* Email */}
        <div className="w-full">
-  <div className="flex flex-col sm:flex-row gap-4">
-    <div className="w-full sm:w-auto">
+  <div className="flex justify-start">
+    <div className="w-full">
       <div className="flex items-start gap-4 bg-white/10 p-4 rounded-lg shadow hover:shadow-yellow-400 transition">
         <FaEnvelope className="text-yellow-400 text-2xl mt-1" />
         <div>

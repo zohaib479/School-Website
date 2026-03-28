@@ -69,6 +69,15 @@ const HomePage = () => {
       }
     }, 100);
   };
+  const handleNavigater26 = ()=>{
+    navigate('/Gallery#section5');
+    setTimeout(()=>{
+      const elem = document.querySelector('#section5');
+      if (elem) {
+        elem.scrollIntoView({ behavior: 'smooth' });
+      }
+    },100)
+  }
 
   return (
     <>
@@ -88,6 +97,20 @@ const HomePage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
+          {/* Result 2026 */}
+          <motion.li
+            className="bg-white/10 p-6 sm:p-8 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer text-center"
+            onClick={handleNavigater26}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <h1 className="text-2xl sm:text-3xl font-bold flex items-center justify-center gap-4">
+              <FaBook className="text-yellow-300 animate-pulse drop-shadow" />
+              <span className="underline underline-offset-4">RESULT 2026</span>
+              <FaBook className="text-purple-400 animate-pulse drop-shadow" />
+            </h1>
+          </motion.li>
+
           {/* Sports Day */}
           <motion.li
             className="bg-white/10 p-6 sm:p-8 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer text-center"

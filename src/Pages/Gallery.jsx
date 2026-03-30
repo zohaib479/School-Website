@@ -126,6 +126,17 @@ import pic125 from '../assets/pic-117.jpg'
 import pic126 from '../assets/pic-118.jpg'
 import pic127 from '../assets/pic-119.jpg'
 import pic128 from '../assets/pic-120.jpg'
+import pic129 from '../assets/pic-121.jpg'
+import pic130 from '../assets/pic-122.jpg'
+import pic131 from '../assets/pic-123.jpg'
+import pic132 from '../assets/pic-124.jpg'
+import pic133 from '../assets/pic-125.jpg'
+import pic134 from '../assets/pic-126.jpg'
+import pic135 from '../assets/pic-127.jpg'
+import pic136 from '../assets/pic-128.jpg'
+import pic137 from '../assets/pic-129.jpg'
+import pic138 from '../assets/pic-130.jpg'
+
 
 
 import SwitchComponent from '../components/SwitchComponent';
@@ -168,7 +179,8 @@ const Gallery = () => {
   pic92, pic93, pic94, pic95, pic96, pic97, pic98, pic99, pic100, pic101,
   pic102, pic103, pic104, pic105, pic106, pic107, pic108, pic109, pic110, pic111,
   pic112, pic113, pic114, pic115, pic116, pic117, pic118, pic119, pic120, pic121,
-  pic122, pic123, pic124, pic125, pic126, pic127, pic128
+  pic122, pic123, pic124, pic125, pic126, pic127, pic128,pic129,pic130,
+  pic132,pic133,pic134,pic135,pic136,pic137,pic138
 ].map((pic, index) => (
   <div
     key={index}

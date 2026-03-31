@@ -136,6 +136,7 @@ import pic135 from '../assets/pic-127.jpg'
 import pic136 from '../assets/pic-128.jpg'
 import pic137 from '../assets/pic-129.jpg'
 import pic138 from '../assets/pic-130.jpg'
+import pic139 from '../assets/pic-131.jpg'
 
 
 
@@ -180,7 +181,7 @@ const Gallery = () => {
   pic102, pic103, pic104, pic105, pic106, pic107, pic108, pic109, pic110, pic111,
   pic112, pic113, pic114, pic115, pic116, pic117, pic118, pic119, pic120, pic121,
   pic122, pic123, pic124, pic125, pic126, pic127, pic128,pic129,pic130,
-  pic132,pic133,pic134,pic135,pic136,pic137,pic138
+  pic132,pic133,pic134,pic135,pic136,pic137,pic138,pic139
 ].map((pic, index) => (
   <div
     key={index}

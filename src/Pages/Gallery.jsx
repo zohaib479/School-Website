@@ -137,6 +137,33 @@ import pic136 from '../assets/pic-128.jpg'
 import pic137 from '../assets/pic-129.jpg'
 import pic138 from '../assets/pic-130.jpg'
 import pic139 from '../assets/pic-131.jpg'
+import pic140 from '../assets/pic-132.jpg'
+import pic141 from '../assets/pic-133.jpg'
+import pic142 from '../assets/pic-134.jpg'
+import pic143 from '../assets/pic-135.jpg'
+import pic144 from '../assets/pic-136.jpg'
+import pic145 from '../assets/pic-137.jpg'
+import pic146 from '../assets/pic-138.jpg'
+import pic147 from '../assets/pic-139.jpg'
+import pic148 from '../assets/pic-140.jpg'
+import pic149 from '../assets/pic-141.jpg'
+import pic151 from '../assets/pic-143.jpg'
+import pic152 from '../assets/pic-144.jpg'
+import pic153 from '../assets/pic-145.jpg'
+import pic154 from '../assets/pic-146.jpg'
+import pic155 from '../assets/pic-147.jpg'
+import pic156 from '../assets/pic-148.jpg'
+import pic157 from '../assets/pic-149.jpg'
+import pic158 from '../assets/pic-150.jpg'
+import pic159 from '../assets/pic-151.jpg'
+import pic160 from '../assets/pic-152.jpg'
+import pic161 from '../assets/pic-153.jpg'
+import pic162 from '../assets/pic-154.jpg'
+import pic163 from '../assets/pic-155.jpg'
+import pic164 from '../assets/pic-156.jpg'
+import pic165 from '../assets/pic-157.jpg'
+import pic166 from '../assets/pic-158.jpg'
+
 
 
 
@@ -181,7 +208,9 @@ const Gallery = () => {
   pic102, pic103, pic104, pic105, pic106, pic107, pic108, pic109, pic110, pic111,
   pic112, pic113, pic114, pic115, pic116, pic117, pic118, pic119, pic120, pic121,
   pic122, pic123, pic124, pic125, pic126, pic127, pic128,pic129,pic130,
-  pic132,pic133,pic134,pic135,pic136,pic137,pic138,pic139
+  pic132,pic133,pic134,pic135,pic136,pic137,pic138,pic139,pic140,pic141,pic142,pic143
+  ,pic144,pic145,pic146,pic147,pic148,pic149,pic151,pic152,pic153,pic154,
+  pic155,pic156,pic157,pic158,pic159,pic160,pic161,pic162,pic163,pic164,pic165,pic166
 ].map((pic, index) => (
   <div
     key={index}

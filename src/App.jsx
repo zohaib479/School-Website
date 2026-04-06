@@ -21,17 +21,7 @@ import ThankYou from './Pages/Thankyou';
 const App = () => {
 
 
-  const [data, setdata] = useState([])
-  const getData = async () => {
-    console.log('hello');
-    const response = await axios.get('https://picsum.photos/v2/list')//asyncronous in nature 9 
-    setdata(response.data)
-    console.log(data)
-  }
-  useEffect(() => {
-    getData()
-  }, [])
-  const location = useLocation();
+ 
 
   return (
     <>
